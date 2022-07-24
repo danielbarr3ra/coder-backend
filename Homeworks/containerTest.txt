@@ -1,0 +1,13 @@
+{
+  "id": 0,
+  "name": "test1",
+  "property": "prop1"
+}{
+  "id": 1,
+  "name": "test1",
+  "property": "prop1"
+}{
+  "id": 2,
+  "name": "test1",
+  "property": "prop1"
+}
