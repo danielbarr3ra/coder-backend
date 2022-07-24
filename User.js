@@ -10,6 +10,7 @@ class User {
     }
     addPet(newPet) {
         this.pets.push(newPet)
+        void this.pets
     }
     countPets() {
         return this.pets.length
@@ -20,6 +21,7 @@ class User {
             author: author
         }
         this.books.push(newBook)
+        void this.books
     }
     getBookName(name) {
         let answer = []

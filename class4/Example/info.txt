@@ -1,0 +1,63 @@
+{
+  "contentStr": "{\n    \"name\": \"running-gear\",\n    \"version\": \"0.1.0\",\n    \"private\": true,\n    \"dependencies\": {\n        \"@emotion/react\": \"^11.9.0\",\n        \"@emotion/styled\": \"^11.8.1\",\n        \"@heroicons/react\": \"^1.0.6\",\n        \"@mui/icons-material\": \"^5.8.2\",\n        \"@mui/material\": \"^5.8.2\",\n        \"@testing-library/jest-dom\": \"^5.16.4\",\n        \"@testing-library/react\": \"^13.2.0\",\n        \"@testing-library/user-event\": \"^13.5.0\",\n        \"bootstrap\": \"^5.1.3\",\n        \"firebase\": \"^9.8.4\",\n        \"materialize-css\": \"^1.0.0-rc.2\",\n        \"react\": \"^18.1.0\",\n        \"react-dom\": \"^18.1.0\",\n        \"react-modal\": \"^3.15.1\",\n        \"react-router-dom\": \"^6.3.0\",\n        \"react-scripts\": \"5.0.1\",\n        \"tailwindcss-hero-patterns\": \"^0.0.1\",\n        \"web-vitals\": \"^2.1.4\"\n    },\n    \"scripts\": {\n        \"start\": \"react-scripts start\",\n        \"build\": \"react-scripts build\",\n        \"test\": \"react-scripts test\",\n        \"eject\": \"react-scripts eject\"\n    },\n    \"eslintConfig\": {\n        \"extends\": [\n            \"react-app\",\n            \"react-app/jest\"\n        ]\n    },\n    \"browserslist\": {\n        \"production\": [\n            \">0.2%\",\n            \"not dead\",\n            \"not op_mini all\"\n        ],\n        \"development\": [\n            \"last 1 chrome version\",\n            \"last 1 firefox version\",\n            \"last 1 safari version\"\n        ]\n    },\n    \"devDependencies\": {\n        \"@tailwindcss/aspect-ratio\": \"^0.4.0\",\n        \"@tailwindcss/forms\": \"^0.5.2\",\n        \"@types/node\": \"^17.0.39\",\n        \"autoprefixer\": \"^10.4.7\",\n        \"eslint\": \"^8.17.0\",\n        \"eslint-plugin-react\": \"^7.30.0\",\n        \"postcss\": \"^8.4.14\",\n        \"tailwindcss\": \"^3.0.24\"\n    }\n}",
+  "contentObj": {
+    "name": "running-gear",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@emotion/react": "^11.9.0",
+      "@emotion/styled": "^11.8.1",
+      "@heroicons/react": "^1.0.6",
+      "@mui/icons-material": "^5.8.2",
+      "@mui/material": "^5.8.2",
+      "@testing-library/jest-dom": "^5.16.4",
+      "@testing-library/react": "^13.2.0",
+      "@testing-library/user-event": "^13.5.0",
+      "bootstrap": "^5.1.3",
+      "firebase": "^9.8.4",
+      "materialize-css": "^1.0.0-rc.2",
+      "react": "^18.1.0",
+      "react-dom": "^18.1.0",
+      "react-modal": "^3.15.1",
+      "react-router-dom": "^6.3.0",
+      "react-scripts": "5.0.1",
+      "tailwindcss-hero-patterns": "^0.0.1",
+      "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@tailwindcss/aspect-ratio": "^0.4.0",
+      "@tailwindcss/forms": "^0.5.2",
+      "@types/node": "^17.0.39",
+      "autoprefixer": "^10.4.7",
+      "eslint": "^8.17.0",
+      "eslint-plugin-react": "^7.30.0",
+      "postcss": "^8.4.14",
+      "tailwindcss": "^3.0.24"
+    }
+  },
+  "size": 1686
+}
