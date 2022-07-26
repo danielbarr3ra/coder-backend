@@ -21,27 +21,22 @@ class Container {
         return newObject.id
     }
     async getAll() {
-        const content = fs.promises.readFile(this.filePath, 'utf-8').then((result) => {
-            console.log('here are the objects')
-            return result
-        }).catch((error) => {
-            console.log('could not get the objects')
+        try {
+            const content = await fs.promises.readFile(this.filePath, 'utf-8')
+            return JSON.parse(content)
+        } catch (error) {
             console.log(error)
+            return []
+        }
+    }
+
+    async getById(id) {
+        const content = await this.getAll()
+        const target = content.find((element) => {
+            return element.id == id
         })
-        return content
+        return target
     }
 }
 
-const test = new Container('./containerTest.txt')
-
-testObject = {
-    title: 'namae',
-    price: 1234,
-    thumbnail: 'www.something.com'
-}
-test.save(testObject)
-test.save(testObject)
-test.save(testObject)
-
-test.save(testObject).then((result) => { console.log(result) })
-test.getAll().then((result) => { console.log(result) })
+module.exports = Container
