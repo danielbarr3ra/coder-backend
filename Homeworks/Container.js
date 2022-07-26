@@ -3,19 +3,29 @@ const fs = require('fs')
 class Container {
     constructor(file) {
         this.filePath = file
-        this.total = 0
+    }
+
+    async fileExist(path) {
+        if (!fs.existsSync(path)) {
+            await fs.promises.writeFile(path, '[]')
+        }
     }
 
     async save(object) {
+        await this.fileExist(this.filePath)
+        const content = await this.getAll()
         const newObject = {
-            id: this.total++,
+            id: content.length + 1,
             ...object
         }
+        const updated = [
+            ...content,
+            newObject
+        ]
         try {
-            const writting = fs.promises.appendFile(this.filePath, JSON.stringify(newObject, null, 2) + ',\n')
-            await writting
+            await fs.promises.writeFile(this.filePath, JSON.stringify(updated, null, 2))
         } catch (error) {
-            console.log('could not save the object:')
+            console.log('could not save the new object:')
             console.log(error)
         }
         return newObject.id
@@ -25,7 +35,6 @@ class Container {
             const content = await fs.promises.readFile(this.filePath, 'utf-8')
             return JSON.parse(content)
         } catch (error) {
-            console.log(error)
             return []
         }
     }
@@ -47,9 +56,7 @@ class Container {
             ...content.slice(0, index),
             ...content.slice(index + 1)
         ]
-        console.log(filtered)
         try {
-            await this.deleteAll()
             await fs.promises.writeFile(this.filePath, JSON.stringify(filtered, null, 2))
 
         } catch (error) {
@@ -61,7 +68,7 @@ class Container {
 
     async deleteAll() {
         try {
-            await fs.promises.writeFile(this.filePath, '')
+            await fs.promises.writeFile(this.filePath, '[]')
         } catch (error) {
             console.log('could not delete file')
         }
