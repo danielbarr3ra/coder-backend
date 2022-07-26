@@ -37,6 +37,35 @@ class Container {
         })
         return target
     }
+
+    async deleteById(id) {
+        const content = await this.getAll();
+        const index = content.findIndex((element) => {
+            return element.id === id
+        })
+        const filtered = [
+            ...content.slice(0, index),
+            ...content.slice(index + 1)
+        ]
+        console.log(filtered)
+        try {
+            await this.deleteAll()
+            await fs.promises.writeFile(this.filePath, JSON.stringify(filtered, null, 2))
+
+        } catch (error) {
+            console.log('could not delete id')
+            console.log(error)
+        }
+
+    }
+
+    async deleteAll() {
+        try {
+            await fs.promises.writeFile(this.filePath, '')
+        } catch (error) {
+            console.log('could not delete file')
+        }
+    }
 }
 
 module.exports = Container

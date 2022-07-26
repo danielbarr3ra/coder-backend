@@ -6,12 +6,6 @@
     "thumbnail": "www.something"
   },
   {
-    "id": 1,
-    "title": "item",
-    "price": 100,
-    "thumbnail": "www.something"
-  },
-  {
     "id": 2,
     "title": "item",
     "price": 100,
